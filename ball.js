@@ -9,7 +9,11 @@ class Ball {
     this.score = 0;
     this.compScore = 0;
     this.history = [];
+<<<<<<< HEAD
     this.paddleHeight = 150;
+=======
+    this.maxSpeed;
+>>>>>>> 7c13a64e833ca0902acd9f4fac8d0250ff034e6a
   }
   run() {
     this.update();
@@ -38,7 +42,11 @@ class Ball {
       this.score += 1;
       let delta = this.position.y - this.mouse.y;
       let maxBounceAngle = (5 * 3.14) / 12;
+<<<<<<< HEAD
       let normalizedRelativeIntersectionY = delta / (this.paddleHeight / 2);
+=======
+      let normalizedRelativeIntersectionY = delta / (150 / 2);
+>>>>>>> 7c13a64e833ca0902acd9f4fac8d0250ff034e6a
       let bounceAngle = normalizedRelativeIntersectionY * maxBounceAngle;
       this.velocity.y = 10 * Math.sin(bounceAngle);
       this.velocity.x *= -1;
@@ -53,7 +61,11 @@ class Ball {
         this.position.y -
         random(this.paddlePos.y - 75, random(this.paddlePos.y + 75));
       let maxBounceAngle = (5 * 3.14) / 12;
+<<<<<<< HEAD
       let normalizedRelativeIntersectionY = delta / (this.paddleHeight / 2);
+=======
+      let normalizedRelativeIntersectionY = delta / (150 / 2);
+>>>>>>> 7c13a64e833ca0902acd9f4fac8d0250ff034e6a
       let bounceAngle = normalizedRelativeIntersectionY * maxBounceAngle;
       this.velocity.y = 10 * Math.sin(bounceAngle);
       this.velocity.x *= -1;
@@ -82,8 +94,13 @@ class Ball {
     fill(255);
     text(this.score, width / 4, height / 4);
     text(this.compScore, width / 1.333, height / 4);
+<<<<<<< HEAD
     rect(this.paddlePos.x, this.paddlePos.y - 75, this.r, this.paddleHeight);
     rect(10, this.mouse.y - 75, this.r, this.paddleHeight);
+=======
+    rect(this.paddlePos.x, this.paddlePos.y - 75, this.r, 150);
+    rect(10, this.mouse.y - 75, this.r, 150);
+>>>>>>> 7c13a64e833ca0902acd9f4fac8d0250ff034e6a
     textSize(40);
   }
 }
