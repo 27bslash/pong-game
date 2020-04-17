@@ -1,6 +1,6 @@
 let b = "";
 function setup() {
-  frameRate(30);
+  frameRate(60);
   createCanvas(1600, 900);
   b = new Ball();
 }
